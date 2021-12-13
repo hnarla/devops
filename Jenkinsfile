@@ -24,5 +24,16 @@ pipeline {
                 }
             }
         }
+        stage ('Scan') {
+            steps {
+			    echo "sonar scan"
+                sh 'mvn -Dmaven.test.failure.ignore=true sonar:sonar' 
+            }
+            post {
+                success {
+                    echo "sonar completed"
+                }
+            }
+        }
     }
 }
