@@ -27,7 +27,8 @@ pipeline {
         stage ('Scan') {
             steps {
 			    echo "sonar scan"
-                sh 'mvn -s ./settings.xml -Dmaven.test.failure.ignore=true sonar:sonar -Dsonar.login=“admin” -Dsonar.login=“admin123”' 
+				echo $sonar-token
+                sh 'mvn -s ./settings.xml -Dmaven.test.failure.ignore=true sonar:sonar -Dsonar.login=$sonar-token' 
             }
             post {
                 success {
