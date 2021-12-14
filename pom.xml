@@ -10,7 +10,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <version>1.0</version>  
   <packaging>jar</packaging>  
   
-  <name>Maven Quick Start Archetype</name>  
+  <name>my project</name>
   <url>http://maven.apache.org</url>  
   
   
@@ -29,7 +29,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
     </dependency>
 	
 <dependency>
-  <groupId>junit</groupId>
+  <groupId>org.junit</groupId>
   <artifactId>junit</artifactId>
   <version>4.8.2</version>
   <scope>test</scope>
